@@ -1,0 +1,321 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, sub, sup, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+h1, h2, h3, h4, h5, h6, p, small, strong, b, i {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {
+    display: block;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img, object, embed {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after, q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+td {
+    font-weight: normal;
+    vertical-align: top;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+    vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+    vertical-align: baseline;
+}
+
+.ie6 input {
+    vertical-align: text-bottom;
+}
+
+select, input, textarea {
+    font: 99% sans-serif;
+}
+
+table {
+    font-size: inherit;
+}
+
+small {
+    font-size: 85%;
+}
+
+strong {
+    font-weight: bold;
+}
+
+td, td {
+    vertical-align: top;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+pre, code, kbd, samp {
+    font-family: monospace, sans-serif;
+}
+
+.clickable, label, input[type=button], input[type=submit], input[type=file], button {
+    cursor: pointer;
+}
+
+button, input, select, textarea {
+    margin: 0;
+}
+
+    button, input[type=button] {
+        width: auto;
+        overflow: visible;
+    }
+
+.ie7 img {
+    -ms-interpolation-mode: bicubic;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.ck-b2l-btlbg {
+    display: inline-block;
+    width: 124px;
+    height: 32px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+    .ck-b2l-btlbg.blue {
+        background: #009900 !important;
+        float: right;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+.mvd-item {
+    min-width: 250px;
+    text-align: left !important;
+}
+
+.weight-order > span {
+    font-weight: bold;
+}
+
+.description-weight {
+    color: red;
+}
+
+.checkbox label:after,
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+    background-color: white;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+    .checkbox .cr .cr-icon,
+    .radio .cr .cr-icon {
+        position: absolute;
+        font-size: .8em;
+        line-height: 0;
+        top: 50%;
+        left: 20%;
+    }
+
+    .radio .cr .cr-icon {
+        margin-left: 0.04em;
+    }
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+    .checkbox label input[type="checkbox"] + .cr > .cr-icon,
+    .radio label input[type="radio"] + .cr > .cr-icon {
+        transform: scale(3) rotateZ(-20deg);
+        opacity: 0;
+        transition: all .3s ease-in;
+    }
+
+    .checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+    .radio label input[type="radio"]:checked + .cr > .cr-icon {
+        transform: scale(1) rotateZ(0deg);
+        opacity: 1;
+    }
+
+    .checkbox label input[type="checkbox"]:disabled + .cr,
+    .radio label input[type="radio"]:disabled + .cr {
+        opacity: .5;
+    }
+
+.check-order {
+    margin: 0 !important;
+}
+
+    .check-order.mvd {
+        max-width: 275px;
+        overflow: hidden;
+        height: 55px;
+        text-transform: uppercase;
+    }
+
+    .check-order > label {
+        display: inline-flex;
+        padding-left: 0px;
+    }
+
+    .check-order .name-check {
+        margin-top: -18px;
+    }
+
+.help-block, .validate-css {
+    color: #ff0000;
+}
+
+.image-show {
+    height: 40px;
+    width: 55px;
+}
+
+.div-image a {
+    margin-right: 5px;
+}
+
+.div-image {
+    width: 185px;
+}

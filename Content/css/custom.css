@@ -1,0 +1,163 @@
+.text-error {
+    color: #ff0101;
+}
+
+.info-update {
+    max-width: 260px;
+    margin-bottom: 30px;
+}
+
+#IsAgreeRules {
+    top: -4px;
+    position: relative;
+}
+
+.ht-pop-lform > li {
+    text-align: left;
+}
+
+.lg-pass {
+    background: url("images/bg-main.jpg") repeat center;
+    background-size: cover;
+    padding: 30px 0 50px;
+}
+
+.lg-pamain {
+    background: #ffffff;
+    padding: 50px 110px;
+}
+
+.lg-paifo {
+    border: 1px solid #e1e1e1;
+    padding: 0 100px 30px;
+    text-align: center;
+}
+
+.lg-paitit {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'l-b';
+    max-width: 210px;
+    padding: 0 15px;
+    text-align: center;
+    margin: -10px auto 0;
+    background: #ffffff;
+    font-family: lato;
+    font-weight: bold;
+}
+
+.lg-paitxt {
+    color: #666666;
+    margin: 15px 0 35px;
+    text-align: center;
+}
+
+.lg-paiput {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+    .lg-paiput input {
+        padding-left: 30px;
+    }
+
+    .lg-paiput i {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: #999999;
+    }
+
+.lg-pai-login li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+    .lg-pai-login li:first-child {
+        border-right: 1px solid #333333;
+    }
+
+.lg-pasbtn,
+.lg-pasbtn:hover,
+.lg-pasbtn:focus,
+.lg-pasbtn:active {
+    background: #ff3333;
+    display: inline-block;
+    width: 170px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    outline: none;
+    padding: 0;
+    margin: 20px 0 15px;
+}
+
+.ck-pop-lgfb a {
+    display: inline-block;
+    width: 74%;
+    height: 41px;
+    line-height: 41px;
+    color: #ffffff;
+    background: #3a5795;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding-left: 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.ck-pop-lgg a {
+    background: #e64c3c;
+}
+
+@media only screen and (max-width: 400px) {
+    .lg-paifo {
+        padding: 0 30px 30px;
+    }
+
+    .lg-pamain {
+        padding: 0;
+    }
+}
+.order-code, .mvd-store-username{
+    color:blue;
+    text-transform:uppercase;
+    vertical-align:middle !important;
+}
+
+.package-name{
+    font-weight:bold;
+    vertical-align:middle !important;
+    text-align:center;
+}
+.number{
+    text-align:right;
+    vertical-align:middle !important;
+}
+.ht-pop-mvdtit{
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.ht-pop-mvdtb table thead tr th{
+    background-color:#007CC2;
+    color:white;
+    text-align:center;
+    height:50px !important;
+    vertical-align: middle;
+    /*line-height:50px;*/
+}
+.ht-pop-header{
+    min-height:30px;
+}
+.center{
+    text-align:center;
+    vertical-align:middle !important;
+}
+.ht_stctt{
+    color:#f00;
+}

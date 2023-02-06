@@ -1,0 +1,159 @@
+.ht-acmain{
+    max-width: 500px;
+}
+.ht-acmul{
+    margin: 30px 0 0 0;
+}
+.ht-acmul li{
+    display: table;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.ht-acm-name{
+    display: table-cell;
+    vertical-align: middle;
+    width: 35%;
+}
+.ht-acm-right{
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+}
+.ht-acm-right input{
+    color: #b7b7b7;
+}
+.ht-acbtn{
+    margin-left: 35%;
+}
+.ht-acbtn-upd,
+.ht-acbtn-upd:hover,
+.ht-acbtn-upd:active,
+.ht-acbtn-upd:focus{
+    border: none;
+    background: #00a651;
+    display: inline-block;
+    width: 109px;
+    height: 34px;
+    text-align: center;
+    line-height: 38px;
+    color: #f5f4f4;
+    text-transform: uppercase;
+    padding: 0;
+    outline: none;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0,103,50,0.9);
+    -moz-box-shadow: 0 3px 3px 0 rgba(0,103,50,0.9);
+    box-shadow: 0 3px 3px 0 rgba(0,103,50,0.9);
+}
+.ht-acbtn-upd i{
+    margin-right: 4px;
+}
+
+/*END THAY ĐỔI MK*/
+.ht-acbtn-img,
+.ht-acbtn-img:hover,
+.ht-acbtn-img:focus,
+.ht-acbtn-img:active{
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    height: 26px;
+    line-height: 26px;
+    display: inline-block;
+    padding: 0;
+    width: 75px;
+    text-align: center;
+    border: 1px solid #bcbcbc;
+    outline: none;
+    background: linear-gradient(to bottom, #FBFBFB 0%, #B6B6B6 100%);
+    background: -moz-linear-gradient(to bottom, #FBFBFB 0%, #B6B6B6 100%);
+    background: -o-linear-gradient(to bottom, #FBFBFB 0%, #B6B6B6 100%);
+    background: -ms-linear-gradient(to bottom, #FBFBFB 0%, #B6B6B6 100%);
+    background: -webkit-linear-gradient(top, #FBFBFB 0%, #B6B6B6 100%);
+}
+.ht-accnote{
+    margin: 15px 0 0 0;
+    padding: 15px;
+    background: #fffceb;
+    border: 1px solid #e2ae53;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.ck-ntit{
+    color: #f55951;
+   font-weight: 700;
+    margin-bottom: 8px;
+}
+.ht-acm-input{
+    padding-left: 90px;
+}
+
+/*END QLTK*/
+
+.ht-accn-txt{
+    font-style: italic;
+}
+.ht-ycmain{
+    margin: 25px 0 0 0;
+}
+.ht-ycmul{
+    margin: 0 -10px 20px;
+    overflow: hidden;
+}
+.ht-ycmul li{
+    float: left;
+    width: 35%;
+    padding: 0 10px;
+}
+.ht-ycmul li:last-child{
+    width: 30%;
+}
+.ht-ycm-name{
+    margin-bottom: 10px;
+}
+.ht-ycm-name span{
+    color: #ed2117;
+}
+.ht-ycm-img,
+.ht-ycm-img:hover,
+.ht-ycm-img:active,
+.ht-ycm-img:focus{
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    line-height: 37px;
+    padding: 0 20px;
+    color: #ffffff;
+    background: #3b94d2;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.ht-ycm-img i{
+    margin-right: 8px;
+}
+.ht-ycm-btn{
+    margin: 20px 0 0 0;
+}
+.ht-ycm-btn button,
+.ht-ycm-btn button:hover,
+.ht-ycm-btn button:active,
+.ht-ycm-btn button:focus{
+    font-weight: 700;
+    display: inline-block;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 153px;
+    height: 49px;
+    text-align: center;
+    line-height: 50px;
+    background: #fa2828;
+    border-bottom: 3px solid #ac0000;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 0;
+    outline: none;
+}
+
+/*END YEU CAU KHIEU NAI*/

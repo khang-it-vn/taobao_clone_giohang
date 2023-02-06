@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Quản lý đơn hàng | TaobaoExpress</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicons -->
+    
+    <!-- Css -->
+    <link rel="stylesheet" href="Content/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Content/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="Content/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="Content/css/bootstrap-timepicker.css" />
+    <link rel="stylesheet" href="Content/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="Content/css/sweetalert.css" />
+    
+    <link rel="stylesheet" href="Content/css/chosen.css" />
+    <link rel="stylesheet" href="Content/css/jquery-ui-1.10.3.custom.min.css" />
+    <link rel="stylesheet" href="Content/css/reset.css" />
+    <link rel="stylesheet" href="Content/css/font.css" />
+    <link rel="stylesheet" href="Content/css/layout.css" />
+    <link rel="stylesheet" href="Content/css/donhang.css" />
+    <link rel="stylesheet" href="Content/css/giohang.css" />
+    <link rel="stylesheet" href="Content/css/fix.css" />
+    <link rel="stylesheet" href="Content/css/custom.css" />
+    <link href="assets/css/header.css" rel="stylesheet" />
+    <link href="Content/css/taikhoan.css" rel="stylesheet" />
+    <link href="assets/css/kygui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Content/css/donchuyennguoc/index.css" />
+
+    <!-- Optionally add helpers - button, thumbnail and/or media -->
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="https://taobaovietnam.vn/Content/plugins/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Content/plugins/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Content/plugins/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <!-- Js -->
+    <script src="Content/js/libs/jquery-1.11.2.min.js"></script>
+    <script src="Content/js/libs/bootstrap.min.js"></script>
+    <script src="Content/js/sweetalert.min.js"></script>
+    <script src="Content/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="Content/js/functions.js"></script>
+    <script src="Content/js/libs/jquery.twbsPagination.min.js"></script>
+    
+
+    <script src="assets/js/notify.min.js"></script>
+
+    <script src="Content/js/layout.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <script src="Content/js/libs/ie-emulation-modes-warning.js"></script>
+    <script src="Content/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="Content/plugins/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="Content/plugins/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="Content/plugins/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script type="text/javascript" src="Content/plugins/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <!--[if lt IE 9]>
+    <script src="~Content/js/libs/html5shiv.min.js"></script>
+    <script src="~Content/js/libs/respond.min.js"></script>
+    <![endif]-->
+    <!-- Chat css-->
+    <link rel="stylesheet" href="Content/css/chat.css" />
+
+    <style>
+        /*[v-cloak] {
+            display: none;
+        }*/
+        .ht-mor-nhs > li {
+            text-align: left;
+            border-bottom: 1px dashed #dddddd;
+        }
+
+        .red {
+            color: #da251c;
+        }
+
+        /*.blue { color: #007cc2; }*/
+
+        .image_note {
+            width: 37px;
+            height: 35px;
+            cursor: -webkit-zoom-in;
+            border: 1px solid #ddd;
+        }
+
+        .text-left {
+            text-align: left !important;
+        }
+
+        .text-right {
+            text-align: right !important;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="ht-header">
+
+<head>
+    <!-- Chat css-->
+    
+    <!-- moment js -->
+    <script src="assets/js/moment.min.js"></script>
+    
+</head>
+<div class="all-body-overlay"></div>
+
+<div class="tb-header">
+    <div class="tb-hdtop clearfix">
+        <ul class="tb-hdtleft">
+            <li><p>Tỷ gi&#225;: <span>1¥</span> = <span>3,640 đ</span></p></li>
+            <li><p>Số dư: <span><strong>0 VNĐ</strong></span></p></li>
+        </ul>
+
+        <ul class="tb-hdtrus clearfix">
+            <li class="li-count-item"><a class="tb-hdtrusa" href="/gio-hang"><img src="assets/images/hd/ic_add_shopping_cart.png" alt=""> <i class="tb-hdtrusi">Giỏ hàng</i> <span class="notif-count-header">0</span></a></li>
+            <li class="li-count-item">
+                <div class="dropdown">
+                    <a class="tb-hdtrusa" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/images/hd/ic_message.png" alt=""> <i class="tb-hdtrusi">Chat</i> <span class="notif-count-header">0</span>
+                    </a>
+                    <ul class="dropdown-menu tb-hdtrdrd">
+                        <li><h2>Tin nhắn</h2></li>
+                        <li><a class="tb-hdtrdrd-vm" href="">Xem thêm</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="li-count-item">
+                <div class="dropdown">
+                    <a class="tb-hdtrusa" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/images/hd/ic_notifications_none.png" alt="" width="12"> <i class="tb-hdtrusi">Đơn hàng</i> <span id="count-notify-user" class="notif-count-header">0</span>
+                    </a>
+                    <ul id="ul-notify-user" class="dropdown-menu tb-hdtrdrd"></ul>
+                </div>
+            </li>
+            <li class="li-count-item">
+                <div class="dropdown">
+                    <a class="tb-hdtrusa" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/images/hd/ic_notifications_none.png" alt="" width="12"> <i class="tb-hdtrusi">Hệ thống</i> <span id="count-notify-email" class="notif-count-header">0</span>
+                    </a>
+                    <ul id="ul-notify-email" class="dropdown-menu tb-hdtrdrd"></ul>
+                </div>
+            </li>
+            <li class="li-language">
+                <div class="dropdown">
+                    <a class="tb-hdtrusa" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="Content/images/flags/vi-VN.png" alt="" width="32">
+                    </a>
+                        <ul id="ul-notify-email" class="dropdown-menu ul-language">
+                                    <li><a href="/home/changelanguage?lang=en-US"><img src="Content/images/flags/en-US.png" alt="" width="32" class="image-language">US</a></li>
+                                    <li><a href="/home/changelanguage?lang=zh-CN"><img src="Content/images/flags/zh-CN.png" alt="" width="32" class="image-language">CN</a></li>
+                        </ul>
+
+                </div>
+            </li>
+            <li style="min-width:142px;">
+                <div class="dropdown" id="id-h-acc">
+                    <a class="tb-hdtrusa" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <strong class="tb-hdtrusnm">Nguyễn Ho&#224;ng Khang</strong>
+                    </a>
+                    <div class="dropdown-menu tb-hdtrddw">
+                        <div class="tb-hdtratbl">
+                            <div class="tb-hdtratd">
+                                <div class="tb-hdtrus-tb tb-bdbt">
+                                    <p class="tb-hdtrus-td1">
+                                            <img class="tb-hdtrusimg" src="assets/images/hd/user.png" alt="">
+                                    </p>
+                                    <ul class="tb-hdtrus-td2 tb-hdtrusm">
+                                        <li><strong>Nguyễn Ho&#224;ng Khang</strong></li>
+                                        <li>Email: nguyenhoangkhangnsc19@gmail.com</li>
+                                        <li>Điện thoại: <span>01234567907</span></li>
+                                    </ul>
+                                </div>
+                                <div class="tb-hdradds tb-bdbt">
+                                    <p><strong>Địa chỉ nhận h&#224;ng:</strong></p>
+                                    <p title="98 Đường 3/2 - Quận Ba Đ&#236;nh - Th&#224;nh phố H&#224; Nội">98 Đường 3/2 - Quận Ba Đ&#236;nh - Th&#224;nh phố H&#224; Nội</p>
+                                </div>
+                                <p class="tb-hdrlns tb-bdbt"><a href="/tai-khoan-cua-toi" title="">T&#224;i khoản của t&#244;i</a></p>
+                                <p class="tb-hdrlns tb-bdbt"><a href="/thay-doi-mat-khau" title="">Thay đổi mật khẩu</a></p>
+                                <p class="tb-hdrlns"><span class="account-balance">Số dư khả dụng: <strong>0</strong><sup>đ</sup></span></p>
+                                <p class="tb-hdrlnl">
+                                    <a href="/hinh-thuc-thanh-toan" title="" class="btn btn-danger">Nạp tiền</a>
+                                </p>
+                            </div>
+                            <div class="tb-hdtratd">
+                                <ul class="tb-hdtrulss">
+                                    <li>
+                                        <a href="/thong-bao-he-thong" title="">
+                                            <img src="assets/images/hd/ic1.png" alt=""> Th&#244;ng b&#225;o hệ thống
+                                            
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/thong-bao-don-hang" title="">
+                                            <img src="assets/images/hd/ic1.png" alt=""> Th&#244;ng b&#225;o đơn h&#224;ng
+                                            
+                                        </a>
+                                    </li>
+                                    <li><a href="/don-hang" title=""><img src="assets/images/hd/ic2.png" alt=""> Danh s&#225;ch đơn h&#224;ng</a> </li>
+                                    <li><a href="/don-hang-ky-gui" title=""><img src="assets/images/hd/ic3.png" alt=""> Danh s&#225;ch đơn k&#253; gửi</a> </li>
+                                    <li><a href="/tat-ca-khieu-nai" title=""><img src="assets/images/hd/ic4.png" alt=""> Danh s&#225;ch khiếu nại</a> </li>
+                                </ul>
+                                <div class="tb-hdtrus-tb">
+                                    <div class="tb-hdtrus-td2 tb-hdtvip">
+                                        <p><strong style="text-transform:uppercase">Cấp độ VIP hiện tại của bạn</strong></p>
+                                        <p>Cấp độ tiếp theo c&#242;n:</p>
+                                        <p><strong class="tb-hdtvipcl">1,000,000</strong><sup>đ</sup></p>
+                                    </div>
+                                    <p class="tb-hdtrus-td1"><img src="Content/images/vipicon0.gif" width="90" /></p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="tb-hdtrvmode"><a href="/Account/LogOff" title="Đăng xuất" role="button">Đăng xuất</a></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        
+        <ul class="tb-hdtrcall">
+            <li><i class="fa fa-volume-control-phone"></i> Kế to&#225;n: <span>0243.9970.777</span></li>
+            <li>Kho: <span>0243.9956.222</span></li>
+            <li>Khiếu nại: <span>0914.177.666</span></li>
+            <li>Cskh: <span>0243.9959.666</span></li>
+        </ul>
+    </div>
+
+    <div class="tb-hdmain clearfix">
+        <a href="/" title="" class="tb-hdm-logo">
+            <img src="assets/images/hd/taobaoexpress-logo.png" alt="">
+        </a>
+        <div class="tb-hdm-right">
+            <div class="tb-hdm-rrow clearfix">
+                <div class="tb-hdm-rfr">
+                    <div class="tbe-search input-group">
+                        <div class="input-group-btn">
+                            <button type="button" id="btn-select" data-id="taobao" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/hd/s1.png" alt=""> <span class="caret"></span></button>
+                            <ul class="dropdown-menu" id="sub-select">
+                                <li><a title="" class="taobao"><img src="assets/images/hd/s1.png" alt=""></a></li>
+                                <li><a title="" class="1688"><img src="assets/images/hd/s3.png" alt=""></a></li>
+                                <li><a title="" class="tmall"><img src="assets/images/hd/s4.png" alt=""></a></li>
+                                <li><a title="" class="alibaba"><img src="assets/images/hd/s5.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <input id="text-search" type="text" class="form-control" placeholder="Nhập sản phẩm cần t&#236;m ...">
+                        <button type="button" class="tbe-searbtn"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="tb-hdm-rlink">
+                    <ul class="clearfix">
+                        <li>
+                            <p>Quản trị đơn hàng thuận tiện trên Smartphone</p>
+                            <ul class="tb-hdm-rul">
+                                <li><a href="https://play.google.com/store/apps/details?id=com.igteam.taobaoexpress&amp;hl=vi" target="_blank" title=""><img src="assets/images/hd/app1.png" alt=""></a></li>
+                                <li><a href="https://apps.apple.com/vn/app/order-express/id1492573382?l=vi" target="_blank" title=""><img src="assets/images/hd/app2.png" alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Cài Extension mua hàng thông minh về trình duyệt</p>
+                            <ul class="tb-hdm-rul">
+                                <li><a href="https://chrome.google.com/webstore/detail/taobaoexpress-order-tool/cljgeamakelbidoianknbfedaejiocgi" target="_blank" title=""><img src="assets/images/hd/extension.png" alt=""></a></li>
+                                <li><a href="https://chrome.google.com/webstore/detail/taobaoexpress-order-tool/cljgeamakelbidoianknbfedaejiocgi" target="_blank" title=""><img src="assets/images/hd/extension2.png" alt=""></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(document).on("click", (".tbe-searbtn"), function () {
+            if ($("#text-search").val() != "") {
+                var target = $("#btn-select").attr("data-id");
+                window.open('https://dathangtrungquoc.com.vn/tim-kiem-san-pham.html?submit=&select-search=' + target + '&key=' + $("#text-search").val() + '&type=' + target, "_blank");
+            }
+        })
+        $(document).on("click", ("#sub-select>li>a"), function () {
+            var target = $(this);
+            $("#sub-select >li").find("a").each(function () {
+                if ($(this).attr("class") == target.attr("class")) {
+                    $("#btn-select").attr("data-id", $(this).attr("class"));
+                    $(this).parent().addClass("active");
+                    $("#btn-select").find("img").attr("src", target.find("img").attr("src"));
+                }
+                else {
+                    $(this).parent().removeClass("active");
+                }
+            })
+
+        })
+    })
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.all-body-overlay').click(function () {
+            $(this).css('display', 'none');
+        });
+        $('#id-h-acc').click(function () {
+            var hacc = $(this).hasClass('open');
+            if (hacc == true) {
+                $('.all-body-overlay').css('display', 'none');
+            } else {
+                $('.all-body-overlay').css('display', 'block');
+            }
+        });
+    });
+</script>
+<style>
+    .all-body-overlay {
+        position: fixed;
+        top: 36px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.69);
+        z-index: 99;
+        display: none;
+    }
+</style>
+    </div>
+    <!--END HEADER-->
+    <div class="ht-main">
+        <div class="ht-mbg">
+            
+            <!--END INFO-->
+            <div class="ht-moder clearfix">
+                <div class="ht-moleft">
+<div class="tb-usifs">
+    <h4><span>Hi!</span> <strong>Nguyễn Ho&#224;ng Khang</strong></h4>
+    <p>Số dư: <strong>0</strong><sup>đ</sup></p>
+    <p><a href="/hinh-thuc-thanh-toan" title="Nạp tiền" class="btn btn-danger" role="button" style="text-transform:uppercase">Nạp tiền</a></p>
+</div>
+<div class="ht-mol-item">
+    <div class="header-item">
+        <span class="fa fa-fw fa-shopping-cart" aria-hidden="true"></span>
+        <p>Quản l&#253; giỏ h&#224;ng</p>
+        <i class="arrow fa fa-fw fa-angle-right item-fa"></i>
+    </div>
+    <ul class="ht-mol-iul">
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/gio-hang">
+                    Giỏ h&#224;ng<span class="notif-count">0</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/san-pham-yeu-thich">
+                    Sản phẩm y&#234;u th&#237;ch
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/shop-yeu-thich">
+                    Shop y&#234;u th&#237;ch
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="ht-mol-item">
+    <div class="header-item">
+        <span class="fa fa-fw fa-cubes" aria-hidden="true"></span>
+        <p>Quản l&#253; đơn h&#224;ng</p>
+        <i class="arrow fa fa-fw fa-angle-right item-fa"></i>
+    </div>
+    <ul class="ht-mol-iul">
+        <li class="order">
+            <div class="child-header-item">
+                <span class="fa fa-fw fa-caret-right" aria-hidden="true"></span>
+                <p>Đơn h&#224;ng order</p>
+            </div>
+            <ul class="ht-mol-iul-child">
+                <li>
+                    <a href="/don-hang">
+
+                        Tất cả
+                    </a>
+                </li>
+                <li>
+                    <a href="/don-hang-cho-xu-ly">
+
+                        Chờ xử l&#253; <span class="Order-WaitingProcessTotal"></span>
+                    </a>
+                </li>
+                <li><a href="/don-hang-cho-bao-gia"> Chờ b&#225;o gi&#225;<span class="Order-WaitingQuoteTotal"></span> </a></li>
+                <li><a href="/don-hang-da-bao-gia">Đ&#227; b&#225;o gi&#225; <span class="Order-QuotedTotal"></span></a></li>
+                <li><a href="/don-hang-cho-dat-coc">Chờ đặt cọc <span class="Order-WaitForDepositTotal"></span> </a></li>
+                <li><a href="/don-cho-mua-hang">Chờ mua <span class="Order-WaitToBuyTotal"></span></a></li>
+                <li><a href="/don-da-mua-hang">Đã mua <span class="Order-BoughtOrderTotal"></span></a></li>
+                <li><a href="/quan-ly-ma-van-don">Shop đang giao <span class="Order-QLMVD"></span></a></li>
+                <li><a href="/don-hang-ve-kho-trung-quoc">Nhập kho TQ <span class="Order-WarehouseTQ"></span></a></li>
+                <li><a href="/don-hang-ve-kho-viet-nam">Nhập kho VN<span class="Order-WareHouseVN"></span> </a></li>
+                <li><a href="/don-hang-cho-xuat-kho-viet-nam">Chờ xuất kho VN <span class="Order-WaittingWarehouseVN"></span> </a></li>
+                <li><a href="/don-hang-xuat-kho-viet-nam">Xuất kho VN <span class=" Order-ExportWarehouseVN"></span> </a></li>
+                <li><a href="/don-hang-da-hoan-thanh">Ho&#224;n th&#224;nh <span class="Order-OrderComplete"></span> </a></li>
+                <li><a href="/shop-het-hang">Hết h&#224;ng <span class="Order-OutShopTotal"></span></a></li>
+                <li><a href="/don-hang-xoa">Hủy<span class="Order-DeleteShop"></span></a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span class="fa fa-fw fa-caret-right" aria-hidden="true"></span>
+                <p>Gia cố hàng order</p>
+            </div>
+            <ul class="ht-mol-iul-child">
+                <li><a href="/ma-van-don-gia-co">Mã đơn cần gia cố</a></li>
+                <li><a href="/lich-su-gia-co">Lịch sử gia cố</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="child-header-item">
+                
+                <span aria-hidden="true"></span>
+                <a href="/lich-su-don-hang">
+                    Lịch sử đơn h&#224;ng
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/lich-su-tra-hang">
+                    Lịch sử trả h&#224;ng
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/tim-kiem-don-hang">T&#236;m kiếm đơn order</a>
+            </div>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/yeu-cau-khieu-nai">Gửi y&#234;u cầu khiếu nại</a>
+            </div>
+        </li>
+        
+        <li class="customer-claim">
+            <div class="child-header-item">
+                <span class="fa fa-fw fa-caret-right" aria-hidden="true"></span>
+                <p>Danh s&#225;ch khiếu nại</p>
+            </div>
+            <ul class="ht-mol-iul-child">
+                <li><a href="/tat-ca-khieu-nai">Tất cả <span class="Claim-All"></span></a></li>
+                <li><a href="/khieu-nai-cho-xu-ly?statuskn=1">Chờ xử l&#253;<span class="Claim-ComplaintsCustomer"></span></a></li>
+                <li><a href="/khieu-nai-dang-xu-ly?statuskn=3">Đang xử lý<span class="Claim-ProcessingComplaints"></span></a></li>
+                <li><a href="/khieu-nai-da-xu-ly?statuskn=2">Đã xử lý<span class="Claim-RespondAccountant"></span></a></li>
+                <li><a href="/khieu-nai-hoan-thanh?statuskn=5">Ho&#224;n th&#224;nh<span class="Claim-SuccessedComplaints"></span></a></li>
+                <li><a href="/khieu-nai-huy?statuskn=6">Đã hủy<span class="Claim-CancelComplaints"></span></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="ht-mol-item">
+    <div class="header-item">
+        <span class="fa fa-fw fa-cube" aria-hidden="true"></span>
+        <p>Quản l&#253; đơn k&#253; gửi</p>
+        <i class="arrow fa fa-fw fa-angle-right item-fa"></i>
+    </div>
+    <ul class="ht-mol-iul">
+        <li>
+            <div class="child-header-item">
+                <span class="fa fa-fw fa-caret-right" aria-hidden="true"></span>
+                <p>Tạo đơn ký gửi</p>
+            </div>
+            <ul class="ht-mol-iul-child">
+                <li><a href="/TaoDonKyGui/KyGuiShop">Tạo đơn ký gửi Shop</a></li>
+                <li><a href="/TaoDonKyGui/KyGuiXuong">Tạo đơn ký gửi Xưởng</a></li>
+            </ul>
+        </li>
+        <li class="KyGui">
+            <div class="child-header-item">
+                <span class="fa fa-fw fa-caret-right" aria-hidden="true"></span>
+                <p>Danh s&#225;ch đơn k&#253; gửi</p>
+            </div>
+            <ul class="ht-mol-iul-child">
+                <li>
+                    <a href="/don-hang-ky-gui">
+                        Tất cả
+                    </a>
+                </li>
+                <li>
+                    <a href="/ky-gui-cho-xu-ly">
+                        Chờ xử l&#253;
+                        <span class="KGChoXuLyToTal"></span>
+                    </a>
+                </li>
+                <li><a href="/ky-gui-cho-bao-gia">Chờ b&#225;o gi&#225; <span class="KGChoBaoGiaTotal"></span></a></li>
+                <li><a href="/ky-gui-da-bao-gia">Đ&#227; b&#225;o gi&#225; <span class="KGDaBaoGiaTotal"></span></a></li>
+                <li><a href="/ky-gui-da-ket-don">Đ&#227; kết đơn <span class="KGDaKetDonTotal"></span></a></li>
+                <li><a href="/ky-gui-da-dat-coc">Đ&#227; đặt cọc <span class="KGDaDatCocTotal"></span></a></li>
+                <li><a href="/ky-gui-nhap-kho-tq">Nhập kho TQ  <span class="KGNhapKhoTqTotal"></span></a></li>
+                <li><a href="/ky-gui-nhap-kho-vn">Nhập kho VN <span class="KGnhapkhoVnTotal"></span></a></li>
+                <li><a href="/ky-gui-xuat-kho-vn">Xuất kho VN<span class="KGXuatKhoVnTotal"></span></a></li>
+                <li><a href="/ky-gui-hoan-thanh">Ho&#224;n th&#224;nh<span class="KGHoanThanhTotal"></span></a></li>
+                <li><a href="/ky-gui-huy">Hủy <span class="KGHuyTotal"></span></a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span class="fa fa-fw fa-caret-right" aria-hidden="true"></span>
+                <p>Gia cố đơn ký gửi</p>
+            </div>
+            <ul class="ht-mol-iul-child">
+                <li><a href="/gia-co-don-ky-gui">Mã cần gia cố</a></li>
+                <li><a href="/lich-su-gia-co-ky-gui">Lịch sử gia cố</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/lich-su-tra-hang-ky-gui">Lịch sử trả hàng ký gửi</a>
+            </div>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/tim-kiem-don-ky-gui">Tìm kiếm đơn ký gửi</a>
+            </div>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span class="fa fa-fw fa-caret-right" aria-hidden="true"></span>
+                <p>Quản lý khiếu nại ký gửi</p>
+            </div>
+            <ul class="ht-mol-iul-child">
+                <li><a href="/claim/kygui">Báo khiếu nại ký gửi</a></li>
+                <li><a href="/claim/lichsukygui">Lịch sử khiếu nại ký gửi</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="ht-mol-item">
+    <div class="header-item">
+        <span class="fa fa-fw fa-truck  " aria-hidden="true"></span>
+        <p>Quản l&#253; đơn chuyển khoản</p>
+        <i class="arrow fa fa-fw fa-angle-right item-fa"></i>
+    </div>
+    <ul class="ht-mol-iul">
+        <li>
+            <div class="child-header-item">
+                <span class="fa fa-fw fa-caret-right" aria-hidden="true"></span>
+                <a href="/tao-don-chuyen-khoan">Tạo đơn chuyển khoản</a>
+            </div>
+        </li>
+        <li class="dck">
+            <div class="child-header-item">
+                <span class="fa fa-fw fa-caret-right" aria-hidden="true"></span>
+                <p>Danh sách chuyển khoản</p>
+            </div>
+            <ul class="ht-mol-iul-child">
+                <li><a href="/don-chuyen-khoan?status=-1">Tất cả <span class="dck-status-all"></span></a></li>
+                <li><a href="/don-chuyen-khoan?status=0">Chờ xác nhận <span class="dck-status-0"></span></a></li>
+                <li><a href="/don-chuyen-khoan?status=1">Chờ b&#225;o gi&#225; <span class="dck-status-1"></span></a></li>
+                <li><a href="/don-chuyen-khoan?status=2">Đ&#227; b&#225;o gi&#225; <span class="dck-status-2"></span></a></li>
+                <li><a href="/don-chuyen-khoan?status=3">Chờ thanh toán <span class="dck-status-3"></span></a></li>
+                <li><a href="/don-chuyen-khoan?status=4">Chờ chuyển khoản TQ <span class="dck-status-4"></span></a></li>
+                <li><a href="/don-chuyen-khoan?status=5">Ho&#224;n th&#224;nh <span class="dck-status-5"></span></a></li>
+                <li><a href="/don-chuyen-khoan?status=6">Hủy <span class="dck-status-6"></span></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="ht-mol-item">
+    <div class="header-item">
+        <span class="fa fa-fw fa-credit-card" aria-hidden="true"></span>
+        <p>Quản l&#253; v&#237; điện tử</p>
+        <i class="arrow fa fa-fw fa-angle-right item-fa"></i>
+    </div>
+    <ul class="ht-mol-iul">
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/vi-dien-tu">Ví điện tử</a>
+            </div>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/hinh-thuc-thanh-toan">Nạp tiền</a>
+            </div>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/rut-tien">Rút tiền</a>
+            </div>
+        </li>
+        <li>
+            <div class="child-header-item">
+                <span aria-hidden="true"></span>
+                <a href="/thong-ke-don-hang">Cấp độ thành viên</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(document).on("click", ".header-item", function () {
+            if (!$(this).hasClass("active")) {
+                var target = $(".header-item.active");
+                target.next().removeClass("active");
+                target.find(".item-fa").addClass("fa-angle-right").removeClass("fa-angle-down");
+                target.removeClass("active");
+                $(this).addClass("active");
+                $(this).find(".item-fa").addClass("fa-angle-down").removeClass("fa-angle-right");
+                $(this).next().addClass("active");
+                $('.ht-moleft').animate({
+                    scrollTop: $(this).offset()
+                }, 200);
+            }
+            else {
+                $(".header-item.active").find(".item-fa").addClass("fa-angle-right").removeClass("fa-angle-down");
+                $(".header-item.active").next().removeClass("active");
+                $(".header-item.active").removeClass("active");
+            }
+        });
+
+        $(document).on("click", ".child-header-item", function () {
+            if (!$(this).hasClass("active")) {
+                $('.ht-moleft').animate({
+                    scrollTop: $(this).offset()
+                }, 200);
+                $(".child-header-item.active").next().removeClass("active");
+                $(".child-header-item.active").find(".span").addClass("fa-caret-right").removeClass("fa-caret-down");
+                $(".child-header-item.active").removeClass("active");
+
+                $(this).addClass("active");
+                $(this).find("span").addClass("fa-caret-down").removeClass("fa-caret-right");
+                $(this).next().addClass("active");
+
+            }
+            else {
+                $(".child-header-item.active").find("span").addClass("fa-caret-right").removeClass("fa-caret-down");
+                $(".child-header-item.active").next().removeClass("active");
+                $(".child-header-item.active").removeClass("active");
+            }
+        })
+
+        $(document).on("click", ".ht-mol-iul-child li", function () {
+            if (!$(this).hasClass("active")) {
+                $(".ht-mol-iul-child li.active").removeClass("active");
+                $(this).addClass("active");
+            }
+            window.location.href = $(this).children('a').attr("href");
+            return false;
+        })
+
+        $(document).on("click", "li.li-item", function () {
+            window.location.href = $(this).children('a').attr("href");
+            return false;
+        });
+        $(document).on("click", ".child-header-item", function () {
+            if ($(this).hasClass("active")) {
+                if ($(this).parent().hasClass("order")) {
+                    CountOrder();
+                }
+                if ($(this).parent().hasClass("KyGui")) {
+                    CountKyGui();
+                }
+                if ($(this).parent().hasClass("dck")) {
+                    CountDonChuyenKhoan();
+                }
+                if ($(this).parent().hasClass("dcn")) {
+                    CountDonChuyenNguoc();
+                }
+                if ($(this).parent().hasClass("customer-claim")) {
+                    CountClaim();
+                }
+            }
+        })
+    });
+    setTimeout(function () {
+        $(".ht-mol-item").find("a").each(function () {
+            if ($(this).attr("href") == window.location.pathname + window.location.search) {
+                var target = $(this).closest(".ht-mol-iul-child").parent();
+                if (target.hasClass("order")) {
+                    CountOrder();
+                }
+                else if (target.hasClass("KyGui")) {
+                    CountKyGui();
+                }
+                else if (target.hasClass("dck")) {
+                    CountDonChuyenKhoan();
+                }
+                else if (target.hasClass("dcn")) {
+                    CountDonChuyenNguoc();
+                }
+                else if (target.hasClass("customer-claim")) {
+                    CountClaim();
+                }
+                $(this).closest("li").addClass("active");
+                $(this).closest(".ht-mol-iul-child").addClass("active");
+                $(this).closest(".ht-mol-iul-child").prev().addClass("active").addClass("hover");
+                $(this).closest(".ht-mol-iul").addClass("active");
+                $(this).closest(".ht-mol-iul").prev().addClass("active");
+                $('.ht-moleft').animate({
+                    scrollTop: $(this).offset().top - 200
+                }, 100);
+            }
+        })
+    }, 50);
+
+
+
+    function CountOrder() {
+        $.get("/Order/CountOrder", null, function (resp) {
+            setData(resp);
+        });
+    }
+
+    function CountClaim() {
+        $.get("/Claim/CountClaim", null, function (resp) {
+            setData(resp);
+        });
+    }
+
+    function CountKyGui() {
+        $.get("/DanhSachKyGui/CountKyGui", null, function (resp) {
+            setData(resp);
+        });
+    }
+
+    function CountDonChuyenKhoan() {
+        $.get("/ChuyenKhoan/LoadCountStatus", null, function (resp) {
+            resp.push({
+                Status: 'all',
+                Count: resp.reduce((t, x) => t + (x.Status === 6 ? 0 : x.Count), 0)
+            })
+            setData({
+                success: true,
+                result: resp.map(x => ({
+                    Keys: 'dck-status-' + x.Status,
+                    Total: x.Count,
+                }))
+            });
+        });
+    }
+
+    function CountDonChuyenNguoc() {
+        $.get("/ChuyenNguoc/LoadCountStatus", null, function (resp) {
+            resp.push({
+                Status: 'all',
+                Count: resp.reduce((t, x) => t + (x.Status === 'HUY' ? 0 : x.Count), 0)
+            })
+            setData({
+                success: true,
+                result: resp.map(x => ({
+                    Keys: 'dcn-status-' + x.Status.toLowerCase().replace(/_/g, '-'),
+                    Total: x.Count,
+                }))
+            });
+        });
+    }
+
+    function setData(resp) {
+        if (resp.success) {
+            if (resp.result.length > 0) {
+                for (var i = 0; i < resp.result.length; i++) {
+                    if (resp.result[i].Total > 0)
+                        $("." + resp.result[i].Keys).html("<span class='notif-count'>" + resp.result[i].Total + "</span>");
+                    else $("." + resp.result[i].Keys).html("");
+                }
+            }
+        }
+    }
+</script>
+                </div>
+                <div class="ht-morihgt">
+                    <div class="content">
+                        
+
+<style>
+    .ht-mor-head {
+        position: relative;
+    }
+
+    .ht-mor-heul {
+        position: absolute;
+        right: -3px;
+        top: -10px;
+    }
+
+        .ht-mor-heul li {
+            display: inline-block;
+            padding: 0 3px;
+        }
+
+            .ht-mor-heul li button,
+            .ht-mor-heul li button:hover,
+            .ht-mor-heul li button:active,
+            .ht-mor-heul li button:focus {
+                display: inline-block;
+                width: 100px;
+                height: 32px;
+                line-height: 32px;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 0;
+                font-weight: 700;
+                outline: none;
+                color: #ffffff;
+            }
+
+                .ht-mor-heul li button span {
+                    margin: 0 3px;
+                }
+
+    .ht-mor-hnap {
+        background: linear-gradient(to bottom, #4394EF 0%, #2053E6 100%);
+        background: -moz-linear-gradient(to bottom, #4394EF 0%, #2053E6 100%);
+        background: -o-linear-gradient(to bottom, #4394EF 0%, #2053E6 100%);
+        background: -ms-linear-gradient(to bottom, #4394EF 0%, #2053E6 100%);
+        background: -webkit-linear-gradient(top, #4394EF 0%, #2053E6 100%);
+        border: 1px solid #0a6fbd;
+    }
+
+    .ht-mor-hrut {
+        background: linear-gradient(to bottom, #FF0000 0%, #E62F1C 100%);
+        background: -moz-linear-gradient(to bottom, #FF0000 0%, #E62F1C 100%);
+        background: -o-linear-gradient(to bottom, #FF0000 0%, #E62F1C 100%);
+        background: -ms-linear-gradient(to bottom, #FF0000 0%, #E62F1C 100%);
+        background: -webkit-linear-gradient(top, #FF0000 0%, #E62F1C 100%);
+        border: 1px solid #be040c;
+    }
+
+    .ht-qlv-ul li {
+        width: 20%;
+        float: left;
+    }
+
+        .ht-qlv-ul li p {
+            font-size: 16px;
+            color: #d88405;
+        }
+
+            .ht-qlv-ul li p span {
+                display: block;
+                color: #27a600;
+                font-weight: 700;
+                margin: 3px 0;
+            }
+
+        .ht-qlv-ul li.ht-qlv-utru p span {
+            color: #fb1313;
+        }
+
+    .ht-qlv-ul {
+        overflow: hidden;
+    }
+
+    .ht-qlv-note {
+        margin: 15px 0 0 0;
+        overflow: hidden;
+    }
+
+        .ht-qlv-note p {
+            display: inline-block;
+            font-size: 15px;
+        }
+
+            .ht-qlv-note p:first-child {
+                margin-right: 20%;
+            }
+
+            .ht-qlv-note p span {
+                color: #fd1f24;
+                font-weight: 700;
+            }
+
+    .ht-qlv-tiul {
+        margin: 0 -3px;
+    }
+
+        .ht-qlv-tiul > li {
+            position: relative;
+            float: left;
+            width: 18%;
+            padding: 0 3px;
+        }
+
+            .ht-qlv-tiul > li:nth-child(3),
+            .ht-qlv-tiul > li:nth-child(4) {
+                width: 23%;
+            }
+
+    .ht-qlv-time {
+        margin: 20px 0;
+    }
+
+    .ht-qlv-tiul {
+        overflow: hidden;
+    }
+
+        .ht-qlv-tiul > li span {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .ht-qlv-tiul > li input {
+            color: #333333;
+        }
+
+    .ht-qlv-btul > li {
+        display: inline-block;
+        padding: 0 3px;
+    }
+
+    .ht-qlv-btn {
+        padding: 0 0 15px;
+        text-align: center;
+        border-bottom: 1px dashed #d7d7d7;
+        margin-bottom: 15px;
+    }
+
+    .ht-qlv-btul > li button,
+    .ht-qlv-btul > li button:hover,
+    .ht-qlv-btul > li button:active,
+    .ht-qlv-btul > li button:focus {
+        display: inline-block;
+        width: 115px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        padding: 0;
+        text-transform: uppercase;
+        color: #f5f4f4;
+        outline: none;
+    }
+
+    .ht-qlv-btul > li span {
+        margin-right: 5px;
+    }
+
+    .ht-qlv-btkt {
+        background: #d7090b;
+    }
+
+    .ht-qlv-btxc {
+        background: #00a651;
+    }
+
+    .ht-mor-table table tbody tr .ht-qlv-tbnote {
+        width: 450px;
+        text-align: left;
+    }
+
+    .ht-mor-ttru {
+        font-weight: 700;
+        color: #ff0909;
+    }
+
+    .ht-mor-tnap {
+        font-weight: 700;
+        color: #019d4d;
+    }
+</style>
+<div class="ht-mor-head">
+    <h2 class="ht-mor-tit">Lịch sử vận đơn gia cố</h2>
+</div>
+<div class="ht-qlv-time">
+    <ul class="ht-qlv-tiul">
+        <li><input type="text" class="form-control" placeholder="Mã vận đơn" id="MaDonHang" onchange="LoadData();"></li>
+        <li><input type='text' class="form-control" id='txtfrom' onchange="CheckDateTime();"><span class="fa fa-calendar"></span></li>
+        <li><input type='text' class="form-control" id='txtto' onchange="CheckDateTime();"><span class="fa fa-calendar"></span></li>
+    </ul>
+</div>
+<div class="ht-mor-table">
+    <table class="table table-bordered" id="datatable1">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>MVD</th>
+                <th>Ngày xác nhận</th>
+                <th>Phí gia cố</th>
+                <th>Tên shop</th>
+                <th>Loại hình vc</th>
+                <th>Mã đơn/Time</th>
+                <th>Nhân viên cs</th>
+                <th>Chi tiết</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<input type="hidden" id="datatable" data-total="0" data-totalrecord="0" data-page="1" />
+<div class="ht-mor-pagination pagecus">
+</div>
+
+<script>
+    $(document).ready(function () {
+        LoadData();
+    });
+
+    function CheckDateTime() {
+        var from = $('#txtfrom').val();
+        var to = $('#txtto').val();
+        var datefrom = new Date(from.split('-')[1] + "/" + from.split('-')[0] + "/" + from.split('-')[2]);
+        var dateto = new Date(to.split('-')[1] + "/" + to.split('-')[0] + "/" + to.split('-')[2]);
+
+        if (datefrom.getTime() > dateto.getTime()) {
+            $('#txtto').val('');
+            swal("Ngày bắt đầu không được lớn hơn ngày kết thúc!", "", "warning");
+        } else {
+            LoadData();
+        }
+    }
+
+    function LoadData() {
+        var maDonHang = $('#MaDonHang').val();
+        var from = $('#txtfrom').val();
+        var to = $('#txtto').val();
+        var data = {
+            maDonHang: maDonHang, from: from, to: to, pageIndex: 1
+        };
+        $.post("/OrdersShop/LoadLichSuMvdGiaCo", data, function (resp) {
+            if (resp != null) {
+                $("#datatable1 tbody").html("");
+                $("#datatable1 tbody").html(resp.Content);
+                if (resp.TotalPage > 1) {
+                    $(".pagination").show();
+                    showPagination(resp.TotalPage);
+                } else {
+                    $(".pagination").hide();
+                }
+            }
+        });
+    }
+
+    // phân trang
+    function showPagination(totalpage) {
+        $('#pagination').remove();
+        $('.pagecus').html('<div class="pagination" id="pagination"></div>');
+        $('#pagination').twbsPagination({
+            totalPages: totalpage,
+            visiblePages: 3,
+            first: 'Trang đầu',
+            prev: 'Trước',
+            next: 'Tiếp',
+            last: 'Trang cuối',
+            onPageClick: function (event, page) {
+                var pageIndex = page;
+                var curentpage = parseInt($('#datatable').attr("data-page"));
+                if (curentpage != page) {
+                    var maDonHang = $('#MaDonHang').val();
+                    var from = $('#txtfrom').val();
+                    var to = $('#txtto').val();
+
+                    var data = {
+                        maDonHang: maDonHang, from: from, to: to, pageIndex: pageIndex
+                    };
+                    $.post("/OrdersShop/LoadLichSuMvdGiaCo", data, function (resp) {
+                        if (resp != null) {
+                            $("#datatable1 tbody").html("");
+                            $("#datatable1 tbody").html(resp.Content);
+                            if (resp.TotalPage > 1) {
+                                $(".pagination").show();
+                            } else {
+                                $(".pagination").hide();
+                            }
+                            $('#datatable').attr("data-total", resp.TotalPage);
+                            $('#datatable').attr("data-page", pageIndex);
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+</script>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END MAIN-->
+    <!--Loading-->
+    <div class="loading">
+        <div class="cssload-loader-ring">
+            <div class="ring"></div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <script src="Content/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        LoadProvinceList();
+        $("#ddlprovince").change(function () {
+            LoadDistrictByProvinceId();
+        })
+    });
+
+    function LoadDistrictByProvinceId() {
+        var provinceid = $("#ddlprovince option:selected").val();
+        var data = {
+            id: provinceid
+        }
+        $.post("/Account/GetDistrict", data, function (resp) {
+            if (resp.DistrictList.length > 0) {
+                $('#ddldistrict').html("");
+                for (var i = 0; i < resp.DistrictList.length; i++) {
+                    $("#ddldistrict").append($('<option>', {
+                        value: resp.DistrictList[i].Value,
+                        text: resp.DistrictList[i].Text
+                    }));
+                }
+                $('.selectpicker').selectpicker('refresh');
+                setAddress();
+            }
+        });
+    }
+
+    function LoadProvinceList() {
+        $.post("/Account/GetProvince", function (resp) {
+            if (resp.ProvinceList.length > 0) {
+                for (var i = 0; i < resp.ProvinceList.length; i++) {
+                    $("#ddlprovince").append($('<option>', {
+                        value: resp.ProvinceList[i].Value,
+                        text: resp.ProvinceList[i].Text
+                    }));
+                }
+                LoadDistrictByProvinceId();
+            }
+        });
+    }
+
+    function setAddress() {
+        $("#hdfProvince").val($("#ddlprovince option:selected").val());
+        $("#hdfDistrict").val($("#ddldistrict option:selected").val());
+    }
+   
+</script>
+<script>
+        $(document).on('hidden.bs.modal', '.modal', function () { $('.modal:visible').length && $(document.body).addClass('modal-open'); });
+</script>
+<div class="modal fade" id="ck-popdk" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog ck-pop-dialog" role="document">
+        <div class="modal-content ht-pop-content">
+            <div class="ht-pop-main">
+                <h2 class="ht-pop-tit">Khách hàng đăng ký</h2>
+                <form action="/Account/Register" class="uk-form uk-form-horizontal" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="p6oG6IZTWHUCS713KlcO3RnZgeMwLnyxU_4VdOycFu8FjXI5pA_FJZ_G_doJ-aYWvkTWhHEKpFaZg9NqhL-RutVFMXZcXwnOkguTH7J47gM1" /><input id="hdfDistrict" name="District" type="hidden" value="" /><input id="hdfProvince" name="Province" type="hidden" value="" />                    <span class="field-validation-error"></span>
+                    <ul class="ht-pop-lform">
+                        <li>
+                            <input class="form-control" data-val="true" data-val-required="Họ tên không được để trống" id="FullName" name="FullName" placeholder="Họ và tên" type="text" value="" />
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="FullName" data-valmsg-replace="true"></span>
+                        </li>
+                        <li>
+                            <input class="form-control" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="Email không được để trống" id="Email" name="Email" placeholder="Email" type="email" value="" />
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                        </li>
+                        <li>
+                            <input class="form-control" data-val="true" data-val-length="Mật khẩu phải có độ dài ít nhất 6 ký tự" data-val-length-max="100" data-val-length-min="6" data-val-required="Mật khẩu không được để trống" id="Password" name="Password" placeholder="Mật khẩu" type="password" />
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                        </li>
+                        <li>
+                            <input class="form-control" data-val="true" data-val-equalto="Mật khẩu và mật khẩu xác nhận không trùng khớp." data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" placeholder="Nhắc lại mật khẩu" type="password" />
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>
+                        </li>
+                        <li>
+                            <input class="form-control" data-val="true" data-val-required="Ngày sinh không được để trống" id="DateOfBirth" name="DateOfBirth" placeholder="Ngày sinh" type="text" value="" />
+                            <i class="fa fa-calendar"></i>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="DateOfBirth" data-valmsg-replace="true"></span>
+                        </li>
+                        <li>
+                            <select id="ddlprovince" class="selectpicker gh-gc5sl" data-live-search="true"></select>
+                        </li>
+                        <li>
+                            <select id="ddldistrict" class="selectpicker gh-gc5sl" data-live-search="true"></select>
+                        </li>
+                        <li>
+                            <input class="form-control" data-val="true" data-val-required="Địa chỉ không được để trống" id="Address" name="Address" placeholder="Địa chỉ" type="text" value="" />
+
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Address" data-valmsg-replace="true"></span>
+                        </li>
+                        <li>
+                            <input class="form-control" data-val="true" data-val-required="Số điện thoại không được để trống" id="PhoneNumber" name="PhoneNumber" placeholder="Số điện thoại" type="text" value="" />
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span>
+                        </li>
+                        <li>
+                            <input data-val="true" data-val-required="The IsAgreeRules field is required." id="IsAgreeRules" name="IsAgreeRules" type="checkbox" value="true" /><input name="IsAgreeRules" type="hidden" value="false" /> Tôi đồng ý với <a href="/home/term/" target="_blank">điều khoản</a> của nhà cung cấp
+                        </li>
+                    </ul>
+                    <div class="ck-pop-capcha">
+                            <script src="https://www.google.com/recaptcha/api.js?hl=vi" async defer></script>
+                            <div class="g-recaptcha uk-text-center" data-sitekey="6Lf10JAUAAAAANBNhWJikWbdzTFYTiVUv0RefkGX" data-type="none"></div>
+                            <div style="color:red">
+                                
+                            </div>
+                        </div>
+                    <p class="ck-pop-btndk"><button type="submit" name="register" value="login">Đăng ký</button></p>
+</form>            </div>
+<form action="/Account/ExternalLogin" method="post"><input name="__RequestVerificationToken" type="hidden" value="5U-kh5ZsJeIhUW8zSeU0wkZhkXhSiIrWZasUD4orB_jfdd27zpKZMSzR3haZep0mJW0zl5xp89wO-FwZ-2GsscdPkZaPkYGPD1BmKNuPO7s1" />                <div class="ck-pop-lfb">
+                    <div class="ck-pop-lbifo">
+                        <h2 class="ck-pop-lftit">Hoặc đăng nhập bằng</h2>
+                        <ul class="ck-pop-lful clearfix">
+                            <li>
+                                <button class="ck-pop-lgfb" id="Facebook" name="provider" type="submit" value="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i><a onclick="$(this).closest('button').submit()">Facebook</a></button>
+                            </li>
+                            <li>
+                                <button class="ck-pop-lgfb ck-pop-lgg" id="Google" name="provider" type="submit" value="Google"><i class="fa fa-google-plus" aria-hidden="true"></i><a onclick="$(this).closest('button').submit()">Google+</a></button>
+                            </li>
+                        </ul>
+                        <p class="ck-pop-lfnote">Bạn đã có tài khoản? <a href="/Account/Login" class="ck-hdn" >Đăng nhập!</a></p>
+                    </div>
+                </div>
+</form>        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#DateOfBirth').datetimepicker({
+            format: 'dd-mm-yyyy',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+    });
+</script>
+    <!--END POP DK-->
+    <div class="modal fade" id="ck-popdn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog ck-pop-dialog" role="document">
+        <div class="modal-content ht-pop-content">
+            <div class="ht-pop-main">
+                <h2 class="ht-pop-tit">Kh&#225;ch h&#224;ng đăng nhập</h2>
+                <form action="/dang-nhap" class="uk-form uk-form-horizontal" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="QwFS5VhNXZHYR-JB2cMZGLQglr7BUgJMol2kjoB2AIwWX1-3NVdew1whT6wyA-YHWlnwVpiS0S_c63qXIGbmDLNjrmd03-rnzQf3pcD6qvE1" />                    <label class="login-error text-error form-group"></label>
+                    <ul class="ht-pop-lform">
+                        <li>
+                            <input class="form-control" data-val="true" data-val-required="Email không được để trống" id="email" name="Email" placeholder="Tên đăng nhập" type="text" value="" />
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                        </li>
+                        <li>
+                            <input class="form-control" data-val="true" data-val-required="Mật khẩu không được để trống" id="password" name="Password" placeholder="Mật khẩu" type="password" />
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                        </li>
+                    </ul>
+                    <div class="ht-pop-dnote clearfix">
+                        <div class="ht-pop-dcheck">
+                            <label>
+                                <input type="checkbox"> Ghi nhớ đăng nhập
+                            </label>
+                        </div>
+                        <p class="ht-pop-dmk"><a href="/quen-mat-khau">Qu&#234;n mật khẩu?</a></p>
+                    </div>
+                    <p class="ck-pop-btndk"><button id="btnLogin" type="submit" name="login" value="login">Đăng Nhập</button></p>
+</form>            </div>
+<form action="/Account/ExternalLogin" method="post"><input name="__RequestVerificationToken" type="hidden" value="J4p4vHHrmnMu9timD7TleeAeg4rPMZ4fotceQw6xkolxtZqtMlYy12L7SOnNSyvLvvKBMtIpnmuPf0Pd0gj1lRg2XldyF8hEd5c8sA5o4fo1" />                <div class="ck-pop-lfb">
+                    <div class="ck-pop-lbifo">
+                        <h2 class="ck-pop-lftit">Hoặc Đăng Nhập Bằng</h2>
+                        <ul class="ck-pop-lful clearfix">
+                            <li>
+                                <button class="ck-pop-lgfb" name="provider" type="submit" value="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i><a onclick="$(this).closest('button').submit()">Facebook</a></button>
+                            </li>
+                            <li>
+                                <button class="ck-pop-lgfb ck-pop-lgg" name="provider" type="submit" value="Google"><i class="fa fa-google-plus" aria-hidden="true"></i><a onclick="$(this).closest('button').submit()">Google+</a></button>
+                            </li>
+                        </ul>
+                        <p class="ck-pop-lfnote">Bạn chưa c&#243; t&#224;i khoản? <a href="/dang-ky" class="ck-hdk">Tạo t&#224;i khoản mới</a></p>
+                    </div>
+                </div>
+</form>        </div>
+    </div>
+</div>
+
+
+    <div class="modal fade" id="popdh" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog ht-pop-dhdia" role="document">
+            <div class="modal-content ht-pop-content" id="main">
+
+            </div>
+        </div>
+    </div>
+    <!-- Chat html-->
+    
+<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<div class="row bootstrap snippets">
+    <div id="chatbox" class="chatbox">
+        <div class="box box-successsuccess chatbox-chat chatbox-chat-success">
+            <div class="box-header with-border">
+                <h3 class="box-title" id="chatbox-title" style="color: #fff;font-size: 14px;text-transform: uppercase;font-weight: bold">Chat box</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="remove" id="btn-close-chatbox"><i class="fa fa-times"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="chatbox-chat-messages" id="body-chat">
+
+                </div>
+            </div>
+
+            <div class="box-footer">
+                <div class="input-group" style="margin:10px">
+                    <input type="text" name="message" placeholder="Nhập nội dung chat ..." class="form-control" id="text-message">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-success btn-flat" id="btn-chat-send">Gửi</button>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-notify" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Thông báo</h4>
+            </div>
+            <div class="modal-body">
+                <p id="notify-content"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<input type="hidden" value= id="user-id">
+
+    <input type="hidden" data-id=1100255 id="ss-user-id" />
+    <div class="modal fade" id="popdh" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog ht-pop-dhdia" role="document">
+            <div class="modal-content ht-pop-content" id="main">
+
+            </div>
+        </div>
+    </div>
+    <div id="PopUpDetailShop"></div>
+    <div id="popChiTiet"></div>
+    <script src="Scripts/common.js"></script>
+    <script src="Scripts/order/OrderShop.js"></script>
+    <script src="Scripts/order/orders.js"></script>
+    <!--Fancybox js-->
+
+    <script type="text/javascript">
+        function InitFancybox() {
+            $(".fancybox").each(function () {
+                var id = $(this).data("id");
+                $(".fancybox-" + id).fancybox();
+            })
+        }
+        $(document).ready(function () {
+            InitFancybox();
+            /*
+             *  Simple image gallery. Uses default settings
+             */
+
+
+
+            /*
+             *  Different effects
+             */
+
+            // Change title type, overlay closing speed
+            $(".fancybox-effects-a").fancybox({
+                helpers: {
+                    title: {
+                        type: 'outside'
+                    },
+                    overlay: {
+                        speedOut: 0
+                    }
+                }
+            });
+
+            // Disable opening and closing animations, change title type
+            $(".fancybox-effects-b").fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+
+                helpers: {
+                    title: {
+                        type: 'over'
+                    }
+                }
+            });
+
+            // Set custom style, close if clicked, change title type and overlay color
+            $(".fancybox-effects-c").fancybox({
+                wrapCSS: 'fancybox-custom',
+                closeClick: true,
+
+                openEffect: 'none',
+
+                helpers: {
+                    title: {
+                        type: 'inside'
+                    },
+                    overlay: {
+                        css: {
+                            'background': 'rgba(238,238,238,0.85)'
+                        }
+                    }
+                }
+            });
+
+            // Remove padding, set opening and closing animations, close if clicked and disable overlay
+            $(".fancybox-effects-d").fancybox({
+                padding: 0,
+
+                openEffect: 'elastic',
+                openSpeed: 150,
+
+                closeEffect: 'elastic',
+                closeSpeed: 150,
+
+                closeClick: true,
+
+                helpers: {
+                    overlay: null
+                }
+            });
+
+            /*
+             *  Button helper. Disable animations, hide close button, change title type and content
+             */
+
+            $('.fancybox-buttons').fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+
+                prevEffect: 'none',
+                nextEffect: 'none',
+
+                closeBtn: false,
+
+                helpers: {
+                    title: {
+                        type: 'inside'
+                    },
+                    buttons: {}
+                },
+
+                afterLoad: function () {
+                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
+
+
+            /*
+             *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+             */
+
+            $('.fancybox-thumbs').fancybox({
+                prevEffect: 'none',
+                nextEffect: 'none',
+
+                closeBtn: false,
+                arrows: false,
+                nextClick: true,
+
+                helpers: {
+                    thumbs: {
+                        width: 50,
+                        height: 50
+                    }
+                }
+            });
+
+            /*
+             *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+            */
+            $('.fancybox-media')
+                .attr('rel', 'media-gallery')
+                .fancybox({
+                    openEffect: 'none',
+                    closeEffect: 'none',
+                    prevEffect: 'none',
+                    nextEffect: 'none',
+
+                    arrows: false,
+                    helpers: {
+                        media: {},
+                        buttons: {}
+                    }
+                });
+
+        });
+    </script>
+    <!--End facybox js-->
+    <script src="Scripts/chuyennguoc-chuyenkhoan/libs/vue.min.js"></script>
+    <script src="Scripts/chuyennguoc-chuyenkhoan/libs/axios.js"></script>
+    <script src="Scripts/chuyennguoc-chuyenkhoan/libs/vue-pagination.js"></script>
+    <script src="Scripts/chuyennguoc-chuyenkhoan/libs/vuejs-datepicker.min.js"></script>
+    <script src="Scripts/chuyennguoc-chuyenkhoan/libs/v-money.js"></script>
+    <script src="Scripts/chuyennguoc-chuyenkhoan/libs/vue-textmask.js"></script>
+    <script src="Scripts/chuyennguoc-chuyenkhoan/libs/common.js"></script>
+    <script src="Scripts/jquery.number.js"></script>
+    <script>
+        $(function () {
+            $('.ip-number-vn').number(true, 0);
+        });
+        $(document).on('keyup', '.number-format', function (e) {
+            // Get the value.
+            var input = $(e.target).val();
+            var rs = FormatNumber(input);
+            $(e.target).val(rs);
+
+        });
+        $(document).on('keyup', '.number-int', function (e) {
+            // Get the value.
+            var input = $(e.target).val();
+            var rs = FormatNumberInt(input);
+            $(e.target).val(rs);
+
+        });
+
+        function FormatNumber(num) {
+            var listNum = num.split('.');
+            var number = listNum[0].replace(/\,/g, '');
+            if (!$.isNumeric(number)) {
+                number = number.substring(0, number.length - 1);
+            }
+            var result = "0";
+            if (parseInt(number) > 0) {
+                result = parseInt(number) + '';
+            }
+            var i = 0;
+            var count = 0;
+            while (i < number.length) {
+                if (i % 3 == 0 && i > 0) {
+                    var index = number.length - i;
+                    result = result.insertAt(index, ",");
+                    count++;
+                }
+                i++;
+            }
+            if (listNum.length > 1) {
+                return result + "." + listNum[1];
+            }
+            return result;
+
+        }
+
+        function FormatNumberInt(num) {
+            var listNum = num.split('.');
+            var number = listNum[0].replace(/\,/g, '');
+            if (!$.isNumeric(number)) {
+                number = number.substring(0, number.length - 1);
+            }
+            var result = "0";
+            if (parseInt(number) > 0) {
+                result = parseInt(number) + '';
+            }
+            return result;
+
+        }
+
+        String.prototype.insertAt = function (index, string) {
+            return this.substr(0, index) + string + this.substr(index);
+        }
+        function ShowDetailKG(e) {
+            $(".loading").show();
+            var type
+            var data = {
+                kyguiid: $(e).data("id"),
+                type: $(e).data("type")
+            };
+            $.post("/DanhSachKyGui/LoadDetailKG", data, function (resp) {
+                if (resp != null) {
+                    $("#PopUpDetailShop").html("");
+                    $("#PopUpDetailShop").html(resp.Content);
+                    $('#ctdhKgOD').modal('toggle');
+                    InitFancybox();
+                }
+                $(".loading").hide();
+            });
+        }
+        function closePopup() {
+            $('#ctdhKgOD').modal("hide");
+        }
+    </script>
+
+     <!-- Socket js -->
+    
+    <script>
+        $(document).ready(function () {
+            $('#form_datetime1, #form_datetime2').datetimepicker({
+                format: 'dd/mm/yyyy',
+                weekStart: 1,
+                todayBtn: 1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0
+            });
+        })
+    </script>
+    <!-- moment js -->
+    <script src="assets/js/moment.min.js"></script>
+    
+    
+</body>
+</html>

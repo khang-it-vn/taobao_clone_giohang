@@ -1,0 +1,40 @@
+@font-face {
+    font-weight: 700;
+    src: url('../fonts/lato/Lato-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/lato/Lato-Bold.woff') format('woff'), url('../fonts/lato/Lato-Bold.ttf')  format('truetype'), url('../fonts/lato/Lato-Bold.svg#Lato-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'l-r';
+    src: url('../fonts/lato/Lato-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/lato/Lato-Regular.woff') format('woff'), url('../fonts/lato/Lato-Regular.ttf')  format('truetype'), url('../fonts/lato/Lato-Regular.svg#Lato-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-style: italic;
+    src: url('../fonts/lato/Lato-Italic.eot?#iefix') format('embedded-opentype'),  url('../fonts/lato/Lato-Italic.woff') format('woff'), url('../fonts/lato/Lato-Italic.ttf')  format('truetype'), url('../fonts/lato/Lato-Italic.svg#Lato-Italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'l-m';
+    src: url('../fonts/lato/Lato-Medium.eot?#iefix') format('embedded-opentype'),  url('../fonts/lato/Lato-Medium.woff') format('woff'), url('../fonts/lato/Lato-Medium.ttf')  format('truetype'), url('../fonts/lato/Lato-Medium.svg#Lato-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'l-ib';
+    src: url('../fonts/lato/Lato-BoldItalic.eot?#iefix') format('embedded-opentype'),  url('../fonts/lato/Lato-BoldItalic.woff') format('woff'), url('../fonts/lato/Lato-BoldItalic.ttf')  format('truetype'), url('../fonts/lato/Lato-BoldItalic.svg#Lato-BoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'l-h';
+    src: url('../fonts/lato/Lato-Heavy.eot?#iefix') format('embedded-opentype'),  url('../fonts/lato/Lato-Heavy.woff') format('woff'), url('../fonts/lato/Lato-Heavy.ttf')  format('truetype'), url('../fonts/lato/Lato-Heavy.svg#Lato-Heavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

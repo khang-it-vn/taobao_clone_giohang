@@ -1,0 +1,29 @@
+.ht-mor-nhs > li {
+    text-align: left;
+    border-bottom: 1px dashed #dddddd;
+}
+
+.red { color: #da251c; }
+
+/*.blue { color: #007cc2; }*/
+
+.image_note {
+    width: 37px;
+    height: 35px;
+    cursor: -webkit-zoom-in;
+    border: 1px solid #ddd;
+}
+
+.text-left { text-align: left !important; }
+
+.text-right { text-align: right !important; }
+
+/*[v-cloak] { display: none; }*/
+
+.ht-mor-thover {
+    min-width: 100px;
+}
+
+.ht-mor-ticul li {
+    margin-bottom: 5px;
+}
